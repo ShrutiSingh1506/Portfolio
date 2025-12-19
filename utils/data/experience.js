@@ -1,50 +1,32 @@
 export const experiences = [
   {
     id: 1,
-    title: 'Software Engineer',
-    company: "Signarama",
-    duration: "(Aug 2024 - June 2025)",
-    tools: ['Python', 'Dialogflow', 'Trello', 'Automation', 'Task Management'],
-    image: '/png/signarama.png',
-    description: 'Developed a chatbot using Python and Dialogflow for internal use, improving onboarding and training efficiency by 20%. Designed and implemented automation solutions for Trello boards to streamline task management, resulting in a 35% increase in efficiency.'
+    title: 'Solution Delivery Advisor – Risk & Advisory',
+    company: "Deloitte, Bangalore, India",
+    duration: "(Sept 2021 – Feb 2024)",
+    tools: ['Splunk', 'Google Chronicle', 'SIEM', 'UDR', 'Cloud Security', 'Python', 'Automation'],
+    image: '/png/deloitte.png',
+    description: [
+      "Led Advanced Persistent Threat (APT) investigations and developed threat models aligned with MITRE ATT&CK and NIST standards.",
+      "Engineered scalable SIEM and UDR detection pipelines using Splunk and Google Chronicle, reducing false positives by 20%.",
+      "Collaborated with engineering teams to strengthen firewall, IAM, and cloud security configurations across hybrid environments.",
+      "Designed architectural improvements ensuring high-availability detection and secure data flow across multi-cloud systems.",
+      "Recognized with Deloitte ‘Applause’ and ‘Spot’ Awards for exceptional contributions to MXDR service delivery."
+    ]
   },
   {
     id: 2,
-    title: "Data Science Researcher and Teaching Assistant",
-    company: "University of Maryland",
-    duration: "(May 2023 - Nov 2024)",
-    tools: ['Excel', 'Python', 'Tableau', 'Power BI', 'ETL', 'Data Visualization', 'Natural Language Processing', 'Mentorship'],
-    image: '/png/UMBC.jpg',
-    description: 'Managed 30+ datasets for the Center for Women in Tech assessment, generating 10+ reports and 30+ visualizations using Tableau and Power BI. Mentored 50 students in Natural Language Processing, providing tutoring and feedback. Employed advanced Excel functions and Python for ETL processes and data visualization.'
-  },
-  {
-    id: 3,
-    title: 'Software Engineer',
-    company: "Accenture",
-    duration: "(Sept 2021- Aug 2022)",
-    tools: ['ASP.NET','Core MVC', 'MySQL', 'Jenkins', 'CI/CD', 'Unit Testing', 'Performance Optimization', 'Troubleshooting'],
-    image: '/png/accenture.png',
-    description: 'Redesigned an internal time tracker application using ASP.NET Core MVC, improving user experience and increasing reporting efficiency by 25%. Optimized application performance with unit testing and CI/CD pipelines using Jenkins, resulting in a 15-18% increase in page load times. Utilized advanced debugging and automated testing to achieve a 20% faster page load time.'
-  },
-  {
-    id: 4,
-    title: 'Software Engineer',
-    company: "La Net Team Software Solutions",
-    duration: "(Jan 2021 - Sept 2021)",
-    tools: ['React Native', 'TypeScript', 'Redux', 'AWS Amplify', 'AWS CloudWatch', 'AWS Pinpoint', 'Real-time Tracking', 'Multilingual Support'],
-    image: '/png/lanet.jpeg',
-    description: 'Designed and built a ridesharing application using React Native and TypeScript, integrating AWS services like Amplify, CloudWatch, and Pinpoint for efficient data management. Developed a restaurant application with real-time order tracking, interactive menus, and multilingual support, reducing order processing time by 30%.'
-  },
-   {
-    id: 5,
-    title: "Software Intern",
-    company: "Mokshit Infotech",
-    duration: "(May 2020 - Dec 2020)",
-    tools: ["React Native", "Node.js", "TypeScript", "Azure Services"],
-    image: '/png/mokshit.jpeg',
+    title: 'System Engineer – Cybersecurity Practices',
+    company: "Tata Consultancy Services, Bangalore, India",
+    duration: "(June 2018 – Aug 2021)",
+    tools: ['AWS', 'Python', 'CrowdStrike', 'Zscaler', 'Tenable Nessus', 'Automation', 'Email Security'],
+    image: '/png/tcs.png',
     description: [
-      "Developed and maintained a cross-platform mobile application using React Native, seamlessly integrating Azure services to support and manage over 10,000 daily active users. Optimized server-side APIs with Node.js and TypeScript, reducing response times by 30% and enabling efficient data handling."
+      "Developed AWS-based data pipelines to centralize and automate multi-cloud threat detection workflows.",
+      "Optimized Python batch jobs to unify telemetry from diverse security tools, cutting alert latency by 50%.",
+      "Implemented enterprise-grade IDS/IPS (CrowdStrike, Zscaler) and managed vulnerability assessments using Nessus.",
+      "Designed automation utilities to enhance developer productivity and streamline SOC investigation processes.",
+      "Contributed to building a secure, scalable cloud infrastructure for internal and client security operations."
     ]
-  } 
-]
-
+  }
+];

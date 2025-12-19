@@ -1,30 +1,47 @@
 export const skillsData = [
-  'React',
-  'Python',
-  'Java',
-  'C#',
-  'MySQL', 
-  'AWS',
-  'GCP',
-  'Azure',
-  'Docker',
-  'HTML',
-  'CSS', 
-  'MS Office',
-  'Bootstrap',
-  'C',
-  'C++',
-  'Matlab',
-  'PHP',
-  'Flutter',
-  'Typescript',
-  'Git',
-  'Bootstrap',
-  'MongoDB',
-  'PostgreSQL',
-  'Firebase',
-  'Graphql'
-]
+  // Programming & Scripting
+  "Python",
+  "Bash",
+  "PowerShell",
+  "SQL",
+  "NoSQL",
+  "Git",
+
+  // Cloud Platforms
+  "AWS",
+  "Azure",
+ 
+
+  // Security Platforms & Tools
+  "Splunk",
+  "Google Chronicle",
+  "CrowdStrike",
+  "Tenable Nessus",
+  "Wireshark",
+  "Zscaler",
+  "Microsoft Defender",
+  
+  // Security Practices & Frameworks
+  "MITRE ATT&CK",
+  "NIST",
+  "Zero Trust",
+  "Vulnerability Management",
+  "Incident Response",
+  "Threat Modeling",
+ 
+  
+  // DevSecOps & Automation
+  "Docker",
+  "Kubernetes",
+  "CI/CD",
+  "Security Orchestration",
+
+  // Other Concepts
+  "OAuth",
+  "SPF/DKIM/DMARC",
+];
+
+
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
 // Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new

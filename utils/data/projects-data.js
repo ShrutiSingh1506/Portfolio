@@ -1,63 +1,43 @@
 export const projectsData = [
-    {
-        id: 1,
-        name: 'Cab Around',
-        tools: ['React Native', 'GraphQL', 'AWS', 'AWS Amplify', 'AWS S3', 'AWS CloudWatch'],
-        role: "Software Engineer",
-        code: '',
-        demo: 'https://youtube.com/playlist?list=PLQePrdBWxlsXQREK6iZuaEPGVOKFoVBWh&si=GTli4NfW1-7ZAo7y',
-        description: 'Engineered a dual ridesharing app using React Native, GraphQL, and AWS services, achieving 99.5% uptime. Key features include vehicle-type booking, real-time driver updates, seamless payments, a chatbot boosting engagement by 15%, trip histories, and saved locations for 25% quicker bookings.'
-    },
-    {
-        id: 2,
-        name: 'Digi Mart',
-        tools: ['Java', 'MVC Architecture', 'HTML5', 'CSS3', 'JavaScript', 'Docker', 'Kubernetes', 'AWS'],
-        role: "Software Engineer",
-        code: '',
-        demo: '',
-        description: 'Designed, developed, and deployed an e-commerce website with secure payment gateway integration, utilizing Java, MVC architecture, HTML5, CSS3, JavaScript, and third-party APIs. Containerized the application using Docker and deployed on a Kubernetes cluster for improved scalability and reliability.'
-
-    },
-    {
-        id: 3,
-        name: 'Smart Personal Finance Assistant',
-        tools: ['Python', 'React.js','AWS','JavaScript', 'Machine Learning', 'Predictive Analytics', 'Pandas'],
-        role: "Software Engineer",
-        code: '',
-        demo: '',
-        description: 'Developed a personal finance assistant using Python and React.js that helps users manage their expenses and savings through predictive analytics and personalized insights, resulting in a 25% increase in savings over six months. Created a machine learning model leveraging historical spending data to categorize transactions and forecast monthly budgets with 90% accuracy.'
-
-    },
-    {
-        id: 4,
-        name: "Flow - Travel Assistant",
-        tools: ["React Native", "Axios", "OpenAI API", "JavaScript", "Node.js"],
-        role: "Software Engineer",
-        code: "",
-        demo: "",
-        description: "Developed a  travel assistant mobile app using React Native that provides personalized travel recommendations and real-time assistance to users. Integrated OpenAI API to enable natural language processing for user queries, resulting in 40% more efficient trip planning."
-    },
-        {
-        id: 5,
-        name: "Weather Assistant",
-        tools: ["React Native", "TypeScript", "Open-Meteo API", "AWS", "iOS Notifications"],
-        role: "Software Engineer",
-        code: "",
-        demo: "",
-        description: "A sleek mobile application that acts as a personal weather assistant, providing real-time weather updates and additional insights using the Open-Meteo API. The app includes a modern UI, backend integration, and iOS notifications for unique weather updates."
-    },
-    
+  {
+    id: 1,
+    name: "DeepAntiPhish – Advanced Phishing Detection Framework",
+    tools: ["Python", "TensorFlow", "Optuna"],
+    role: "Project Lead",
+    code: "",
+    demo: "",
+    description: [
+      "Architected an end-to-end deep learning pipeline for phishing detection combining semantic + structural email features.",
+      "Automated preprocessing, model training, and evaluation using TensorFlow and Optuna for hyperparameter tuning.",
+      "Achieved 99.56% accuracy and 0.997 F1-score across benchmark corpora.",
+      "Performed error analysis + interpretability reviews to harden the model against evasive patterns."
+    ],
+  },
+  {
+    id: 2,
+    name: "POS Database Platform – Scalable Transaction Processing",
+    tools: ["AWS EC2", "Airflow", "Spark", "MongoDB", "SQL", "Python"],
+    role: "Project Lead",
+    code: "",
+    demo: "",
+    description: [
+      "Engineered a high-throughput PoS database targeting ~1M transactions/day using AWS EC2 clusters.",
+      "Built ETL pipelines using Airflow + Spark integrating relational and NoSQL models.",
+      "Implemented sharding + materialized views to improve query performance by 10×.",
+      "Migrated 5TB from MySQL to MongoDB; reduced analytics latency from ~5s to <1s."
+    ],
+  },
+  {
+    id: 3,
+    name: "IoT Smart Irrigation System",
+    tools: ["Python", "Arduino"],
+    role: "Project Lead",
+    code: "",
+    demo: "",
+    description: [
+      "Built a real-time IoT irrigation solution using Python + Arduino integrating sensor feedback with valve control.",
+      "Integrated secure data handling and predictive analytics for improved decisions.",
+      "Optimized water utilization by closing the loop between sensor readings and irrigation scheduling."
+    ],
+  },
 ];
-
-// Do not remove any property.
-// Leave it blank instead as shown below
-
-// {
-//     id: 1,
-//     name: '',
-//     description: "",
-//     tools: [],
-//     role: '',
-//     code: '',
-//     demo: '',
-// },

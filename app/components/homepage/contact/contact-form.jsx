@@ -1,5 +1,6 @@
 "use client";
 // @flow strict
+
 import { isValidEmail } from "@/utils/check-email";
 import axios from "axios";
 import { useState } from "react";
@@ -16,7 +17,7 @@ function ContactForm() {
   });
 
   const checkRequired = () => {
-    if (userInput.email && userInput.message && userInput.name) {
+    if (userInput.name && userInput.email && userInput.message) {
       setError({ ...error, required: false });
     }
   };
@@ -24,61 +25,61 @@ function ContactForm() {
   const handleSendMail = async (e) => {
     e.preventDefault();
 
-    if (!userInput.email || !userInput.message || !userInput.name) {
+    if (!userInput.name || !userInput.email || !userInput.message) {
       setError({ ...error, required: true });
       return;
-    } else if (error.email) {
-      return;
-    } else {
-      setError({ ...error, required: false });
-    };
+    }
+
+    if (error.email) return;
 
     try {
       setIsLoading(true);
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/contact`,
-        userInput
-      );
+      await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, userInput);
 
       toast.success("Message sent successfully!");
-      setUserInput({
-        name: "",
-        email: "",
-        message: "",
-      });
-    } catch (error) {
-      toast.error(error?.response?.data?.message);
+      setUserInput({ name: "", email: "", message: "" });
+    } catch (err) {
+      toast.error(err?.response?.data?.message || "Something went wrong. Please try again.");
     } finally {
       setIsLoading(false);
-    };
+    }
   };
 
   return (
     <div>
-      <p className="font-medium mb-5 text-[#046a38] text-xl uppercase text-3xl font-bold leading-10 text-black md:font-extrabold">Contact me</p>
-      <div className="max-w-3xl text-black bg-[#2F2F2F] rounded-lg border border-[#464c6a] p-3 lg:p-5">
-        <p className="text-sm text-[#d3d8e8]">{"If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests."}</p>
-        <div className="mt-6 flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <label className="text-base text-white"> Name: *</label>
+      <p className="mb-4 text-3xl font-extrabold text-[#046a38] uppercase">
+        Get in Touch
+      </p>
+
+      <div className="max-w-3xl bg-[#2F2F2F] rounded-lg border border-[#464c6a] p-5">
+        <p className="text-sm text-[#d3d8e8] leading-relaxed">
+          Interested in security engineering, threat detection, or applied ML in cybersecurity?
+          <br />
+          Feel free to reach out — I’m open to full-time roles, internships, research collaborations,
+          and technical discussions.
+        </p>
+
+        <form className="mt-6 flex flex-col gap-4">
+          {/* Name */}
+          <div className="flex flex-col gap-1">
+            <label className="text-white text-sm">Name *</label>
             <input
-              className="bg-white w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+              className="bg-white border rounded-md px-3 py-2 outline-none focus:border-[#16f2b3]"
               type="text"
-              maxLength="100"
-              required={true}
+              maxLength={100}
+              value={userInput.name}
               onChange={(e) => setUserInput({ ...userInput, name: e.target.value })}
               onBlur={checkRequired}
-              value={userInput.name}
             />
           </div>
 
-          <div className="flex flex-col gap-2">
-            <label className="text-base text-white"> Email: *</label>
+          {/* Email */}
+          <div className="flex flex-col gap-1">
+            <label className="text-white text-sm">Email *</label>
             <input
-              className="bg-white w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+              className="bg-white border rounded-md px-3 py-2 outline-none focus:border-[#16f2b3]"
               type="email"
-              maxLength="100"
-              required={true}
+              maxLength={100}
               value={userInput.email}
               onChange={(e) => setUserInput({ ...userInput, email: e.target.value })}
               onBlur={() => {
@@ -86,46 +87,41 @@ function ContactForm() {
                 setError({ ...error, email: !isValidEmail(userInput.email) });
               }}
             />
-            {error.email && <p className="text-sm text-red-400">Please provide a valid email!</p>}
+            {error.email && (
+              <p className="text-xs text-red-400">Please enter a valid email address.</p>
+            )}
           </div>
 
-          <div className="flex flex-col gap-2">
-            <label className="text-base text-white"> Message: *</label>
+          {/* Message */}
+          <div className="flex flex-col gap-1">
+            <label className="text-white text-sm">Message *</label>
             <textarea
-              className="bg-white w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
-              maxLength="500"
-              name="message"
-              required={true}
+              rows={4}
+              maxLength={500}
+              className="bg-white border rounded-md px-3 py-2 outline-none focus:border-[#16f2b3]"
+              value={userInput.message}
               onChange={(e) => setUserInput({ ...userInput, message: e.target.value })}
               onBlur={checkRequired}
-              rows="4"
-              value={userInput.message}
             />
           </div>
-          <div className="flex flex-col items-center gap-3">
-            {error.required && <p className="text-sm text-red-400">
-              All fields are required!
-            </p>}
-            <button
-              className="flex items-center gap-1 hover:gap-3 rounded-full bg-[#046a38] px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
-              role="button"
-              onClick={handleSendMail}
-              disabled={isLoading}
-            >
-              {
-                isLoading ?
-                <span>Sending Message...</span>:
-                <span className="flex items-center gap-1">
-                  Send Message
-                  <TbMailForward size={20} />
-                </span>
-              }
-            </button>
-          </div>
-        </div>
+
+          {error.required && (
+            <p className="text-xs text-red-400">All fields are required.</p>
+          )}
+
+          <button
+            type="button"
+            onClick={handleSendMail}
+            disabled={isLoading}
+            className="mt-3 flex items-center justify-center gap-2 rounded-full bg-[#046a38] px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white hover:opacity-90 transition"
+          >
+            {isLoading ? "Sending..." : "Send Message"}
+            <TbMailForward size={18} />
+          </button>
+        </form>
       </div>
     </div>
   );
-};
+}
 
 export default ContactForm;
