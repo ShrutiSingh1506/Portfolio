@@ -9,7 +9,7 @@ export const projectsData = [
     description: [
       "Built and published an open-source AI security platform covering autonomous alert triage with exploitability scoring, MITRE ATT&CK attack chain reconstruction, and threat actor attribution across 6 APT groups.",
       "Implemented adversarial input defense layer intercepting prompt injection, data poisoning, IOC obfuscation, and CVE exploit patterns before they reach the LLM analysis layer.",
-      "Validated against OWASP LLM Top 10 adversarial inputs including prompt injection, RAG poisoning, and data poisoning -- 100% detection rate with 0 false positives.",
+      "Validated against OWASP LLM Top 10 adversarial inputs including prompt injection, RAG poisoning, and data poisoning - 100% detection rate with 0 false positives.",
       "Single pipeline runner produces a consolidated interactive HTML dashboard covering all stages: log analysis, adversarial detection, kill chain reconstruction, and threat actor attribution."
     ],
   },
@@ -21,7 +21,7 @@ export const projectsData = [
     code: "",
     demo: "",
     description: [
-      "Discovered stored XSS in ChurchCRM (CWE-79, CVSS 6.4) and Zip Slip in moonrepo/starbase (CWE-22, CVSS 8.8) through independent manual source code review -- both missed by automated scanners.",
+      "Discovered stored XSS in ChurchCRM (CWE-79, CVSS 6.4) and Zip Slip in moonrepo/starbase (CWE-22, CVSS 8.8) through independent manual source code review - both missed by automated scanners.",
       "Confirmed admin session hijacking on the XSS and arbitrary file write on the Zip Slip through working exploit chains built from scratch.",
       "Managed full responsible disclosure with both maintainers, coordinating patch development and verification before public disclosure.",
       "GitHub Security Advisories filed for both vulnerabilities; patches merged and confirmed in production releases."
@@ -29,7 +29,7 @@ export const projectsData = [
   },
   {
     id: 3,
-    name: "Zeus Banking Trojan -- Malware Analysis and IOC Extraction",
+    name: "Zeus Banking Trojan - Malware Analysis and IOC Extraction",
     tools: ["Ghidra", "x64dbg", "Python", "pefile", "YARA", "REMnux", "Windows VM"],
     role: "Analyst",
     code: "",
@@ -43,7 +43,7 @@ export const projectsData = [
   },
   {
     id: 4,
-    name: "DeepAntiPhish -- Phishing Detection Framework",
+    name: "DeepAntiPhish - Phishing Detection Framework",
     tools: ["Python", "TensorFlow", "Keras", "Optuna", "NLP"],
     role: "Author",
     code: "",
