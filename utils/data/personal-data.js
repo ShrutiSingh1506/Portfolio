@@ -1,8 +1,8 @@
 export const personalData = {
   name: "Shruti Singh",
   profile: '/profile.jpg',
-  designation: "Security Engineer | Threat Hunter | Defender of the Digital Realm  🔐",
-  description: "Hey there, I'm Shruti Singh! I bridge technology and defense - transforming cyber threats into opportunities for resilience. Currently mastering cloud & endpoint security and obsessed with building secure, scalable systems.",
+  designation: "Security Engineer | Detection Engineering | AI Security",
+  description: "I'm Shruti Singh, a security engineer with 5 years at Deloitte and TCS spanning detection engineering, incident response, cloud security, and AI security. I build security automation that ships to production - from SIEM detection pipelines to LLM-powered triage agents. Currently completing my M.S. in MIS at Texas A&M (GPA 4.0) and actively looking for security engineering roles.",
   email: 'shruti.singh1506@hotmail.com',
   phone: '+12817442297',
   address: 'College Station TX, USA (Open to relocation)',
@@ -12,5 +12,5 @@ export const personalData = {
   stackOverflow: "",
   leetcode: "",
   devUsername: "shrutis-code",
-  resume: "https://docs.google.com/document/d/1SUCWOz1AipWadKheyO9Bgw2nEDiDZtv-/edit?usp=sharing&ouid=101938901102640002706&rtpof=true&sd=true"
+  resume: "https://shrutisingh-portfolio.netlify.app"
 }

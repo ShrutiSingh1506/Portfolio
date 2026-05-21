@@ -1,32 +1,31 @@
 export const experiences = [
   {
     id: 1,
-    title: 'Solution Delivery Advisor – Risk & Advisory',
+    title: 'Security Engineer',
     company: "Deloitte, Bangalore, India",
-    duration: "(Sept 2021 – Feb 2024)",
-    tools: ['Splunk', 'Google Chronicle', 'SIEM', 'UDR', 'Cloud Security', 'Python', 'Automation'],
+    duration: "(Aug 2021 – Feb 2024)",
+    tools: ['Splunk', 'Google Chronicle', 'CrowdStrike', 'Okta', 'AWS', 'Python', 'LangChain', 'Splunk Phantom'],
     image: '/png/deloitte.png',
     description: [
-      "Led Advanced Persistent Threat (APT) investigations and developed threat models aligned with MITRE ATT&CK and NIST standards.",
-      "Engineered scalable SIEM and UDR detection pipelines using Splunk and Google Chronicle, reducing false positives by 20%.",
-      "Collaborated with engineering teams to strengthen firewall, IAM, and cloud security configurations across hybrid environments.",
-      "Designed architectural improvements ensuring high-availability detection and secure data flow across multi-cloud systems.",
-      "Recognized with Deloitte ‘Applause’ and ‘Spot’ Awards for exceptional contributions to MXDR service delivery."
+      "Engineered 200+ behavioral detections in Splunk ES and Google Chronicle for clients including Cleveland Clinic and Whirlpool, achieving a 15:1 true-positive ratio across cloud, identity, and endpoint telemetry.",
+      "Built an LLM-powered alert triage agent using Python and the Anthropic API that classified alerts by exploitability before analyst review, reducing triage time by 35% across Fortune 500 deployments.",
+      "Led 200+ end-to-end incident investigations including malware analysis in Ghidra and x64dbg, AWS CloudTrail forensics, and Okta identity timeline reconstruction, maintaining 95% SLA adherence.",
+      "Built Python IAM governance automation that ran nightly against AWS Config entitlement data, flagged over-privileged roles, and pushed ServiceNow remediation tickets automatically across 12 cloud accounts.",
+      "Deployed and tuned CrowdStrike Falcon EDR across enterprise endpoint fleets via API-driven policy configuration, reducing false positive volume by 20% for clients including Dhanani Group."
     ]
   },
   {
     id: 2,
-    title: 'System Engineer – Cybersecurity Practices',
+    title: 'Systems Engineer, Security Operations',
     company: "Tata Consultancy Services, Bangalore, India",
-    duration: "(June 2018 – Aug 2021)",
-    tools: ['AWS', 'Python', 'CrowdStrike', 'Zscaler', 'Tenable Nessus', 'Automation', 'Email Security'],
+    duration: "(Jun 2018 – Aug 2021)",
+    tools: ['Splunk', 'CrowdStrike', 'AWS', 'Python', 'TensorFlow', 'Zscaler', 'Tenable Nessus'],
     image: '/png/tcs.png',
     description: [
-      "Developed AWS-based data pipelines to centralize and automate multi-cloud threat detection workflows.",
-      "Optimized Python batch jobs to unify telemetry from diverse security tools, cutting alert latency by 50%.",
-      "Implemented enterprise-grade IDS/IPS (CrowdStrike, Zscaler) and managed vulnerability assessments using Nessus.",
-      "Designed automation utilities to enhance developer productivity and streamline SOC investigation processes.",
-      "Contributed to building a secure, scalable cloud infrastructure for internal and client security operations."
+      "Secured Shell's enterprise environment by building Splunk SPL detection logic and CrowdStrike Falcon EDR coverage from scratch across 5,000+ endpoints, improving analyst throughput by 50%.",
+      "Built and deployed ML-based phishing detection using TensorFlow and NLP trained on 10,000+ adversarial samples, achieving 99.56% accuracy and 0.997 F1-score as a production second detection layer.",
+      "Implemented cloud security baselines across AWS and GCP environments for Shell, configuring GuardDuty, CloudTrail, and IAM policies aligned to CIS benchmarks across 12 cloud accounts.",
+      "Built Python SOAR automation and IOC enrichment pipelines that integrated Splunk, CrowdStrike, and cloud security platforms through API orchestration, eliminating manual handoffs between tools."
     ]
   }
 ];

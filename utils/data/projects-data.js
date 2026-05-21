@@ -1,43 +1,58 @@
 export const projectsData = [
   {
     id: 1,
-    name: "DeepAntiPhish – Advanced Phishing Detection Framework",
-    tools: ["Python", "TensorFlow", "Optuna"],
-    role: "Project Lead",
-    code: "",
+    name: "LLM Security Automation Framework",
+    tools: ["Python", "LangChain", "Anthropic API", "OpenAI API", "ChromaDB", "MITRE ATT&CK"],
+    role: "Author",
+    code: "https://github.com/ShrutiSingh1506/llm-security-automation",
     demo: "",
     description: [
-      "Architected an end-to-end deep learning pipeline for phishing detection combining semantic + structural email features.",
-      "Automated preprocessing, model training, and evaluation using TensorFlow and Optuna for hyperparameter tuning.",
-      "Achieved 99.56% accuracy and 0.997 F1-score across benchmark corpora.",
-      "Performed error analysis + interpretability reviews to harden the model against evasive patterns."
+      "Built and published an open-source AI security platform covering autonomous alert triage with exploitability scoring, MITRE ATT&CK attack chain reconstruction, and threat actor attribution across 6 APT groups.",
+      "Implemented adversarial input defense layer intercepting prompt injection, data poisoning, IOC obfuscation, and CVE exploit patterns before they reach the LLM analysis layer.",
+      "Validated against OWASP LLM Top 10 adversarial inputs including prompt injection, RAG poisoning, and data poisoning -- 100% detection rate with 0 false positives.",
+      "Single pipeline runner produces a consolidated interactive HTML dashboard covering all stages: log analysis, adversarial detection, kill chain reconstruction, and threat actor attribution."
     ],
   },
   {
     id: 2,
-    name: "POS Database Platform – Scalable Transaction Processing",
-    tools: ["AWS EC2", "Airflow", "Spark", "MongoDB", "SQL", "Python"],
-    role: "Project Lead",
+    name: "Vulnerability Research: ChurchCRM (CVE, CVSS 6.4) and moonrepo/starbase (CVE, CVSS 8.8)",
+    tools: ["PHP", "Rust", "Python", "Burp Suite", "Manual Code Review"],
+    role: "Researcher",
     code: "",
     demo: "",
     description: [
-      "Engineered a high-throughput PoS database targeting ~1M transactions/day using AWS EC2 clusters.",
-      "Built ETL pipelines using Airflow + Spark integrating relational and NoSQL models.",
-      "Implemented sharding + materialized views to improve query performance by 10×.",
-      "Migrated 5TB from MySQL to MongoDB; reduced analytics latency from ~5s to <1s."
+      "Discovered stored XSS in ChurchCRM (CWE-79, CVSS 6.4) and Zip Slip in moonrepo/starbase (CWE-22, CVSS 8.8) through independent manual source code review -- both missed by automated scanners.",
+      "Confirmed admin session hijacking on the XSS and arbitrary file write on the Zip Slip through working exploit chains built from scratch.",
+      "Managed full responsible disclosure with both maintainers, coordinating patch development and verification before public disclosure.",
+      "GitHub Security Advisories filed for both vulnerabilities; patches merged and confirmed in production releases."
     ],
   },
   {
     id: 3,
-    name: "IoT Smart Irrigation System",
-    tools: ["Python", "Arduino"],
-    role: "Project Lead",
+    name: "Zeus Banking Trojan -- Malware Analysis and IOC Extraction",
+    tools: ["Ghidra", "x64dbg", "Python", "pefile", "YARA", "REMnux", "Windows VM"],
+    role: "Analyst",
     code: "",
     demo: "",
     description: [
-      "Built a real-time IoT irrigation solution using Python + Arduino integrating sensor feedback with valve control.",
-      "Integrated secure data handling and predictive analytics for improved decisions.",
-      "Optimized water utilization by closing the loop between sensor readings and irrigation scheduling."
+      "Reverse-engineered Zeus banking trojan in a two-VM isolated lab (REMnux + Windows) using Ghidra static analysis and x64dbg dynamic tracing.",
+      "Analyzed API hooking mechanism used for browser credential interception, reconstructed the C2 communication protocol, and extracted IOCs from unpacked binary.",
+      "Mapped persistence mechanisms, registry modifications, and file system activity to MITRE ATT&CK techniques.",
+      "Built a Python YARA rule generator producing reusable detection artifacts from binary analysis findings."
+    ],
+  },
+  {
+    id: 4,
+    name: "DeepAntiPhish -- Phishing Detection Framework",
+    tools: ["Python", "TensorFlow", "Keras", "Optuna", "NLP"],
+    role: "Author",
+    code: "",
+    demo: "",
+    description: [
+      "Built a deep learning phishing detection framework combining semantic and structural email features with Optuna hyperparameter tuning.",
+      "Achieved 99.56% accuracy, 1.00 precision, and 0.997 F1-score on adversarial email corpora.",
+      "Performed error analysis and interpretability reviews to harden the model against evasive patterns.",
+      "Designed for deployment as a production second detection layer alongside signature-based rules."
     ],
   },
 ];
