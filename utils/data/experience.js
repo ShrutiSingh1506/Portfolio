@@ -26,7 +26,6 @@ export const experiences = [
       "Secured Shell's enterprise environment by deploying and configuring CrowdStrike Falcon EDR end-to-end across 5,000+ endpoints via API-driven policy management, building Splunk SPL detection pipelines from scratch, and improving analyst throughput by 50%.",
       "Deployed Zscaler ZIA and ZPA end-to-end for Shell - configured internet access policies, SSL inspection, URL filtering, and Zero Trust application access with device compliance prerequisites, replacing legacy VPN infrastructure.",
       "Configured and managed Cisco ASA and Fortinet FortiGate firewall infrastructure - administered rule bases, NAT policies, VPN configurations, and IDS/IPS tuning; performed policy reviews that reduced over-permissive rules by 30%.",
-      "Built and deployed ML-based phishing detection using TensorFlow and NLP trained on 10,000+ adversarial samples, achieving 99.56% accuracy and 0.997 F1-score as a production second detection layer.",
       "Implemented cloud security baselines across AWS and GCP environments, configuring GuardDuty, CloudTrail, and IAM policies aligned to CIS benchmarks across 12 cloud accounts.",
       "Built Python SOAR automation and IOC enrichment pipelines integrating Splunk, CrowdStrike, and cloud security platforms through API orchestration, eliminating manual handoffs between tools."
     ]
