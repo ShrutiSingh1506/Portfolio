@@ -15,6 +15,20 @@ export const projectsData = [
   },
   {
     id: 2,
+    name: "Texas Interview Intelligence Platform",
+    tools: ["AWS Bedrock", "Lambda", "API Gateway", "Textract", "Comprehend", "DynamoDB", "S3"],
+    role: "Author",
+    code: "https://github.com/ShrutiSingh1506/texas-interview-intelligence",
+    demo: "",
+    description: [
+      "Built a serverless AI orchestration pipeline at the AWS AI CMIS Hackathon (March 2026) - modular Lambda microservices with event-driven architecture, Bedrock for grounded AI generation with hallucination reduction, and DynamoDB for workflow state management.",
+      "Integrated AWS Textract and Comprehend for structured NLP extraction from uploaded documents, grounding AI generation in source material to reduce hallucination risk.",
+      "Designed multi-stage orchestration architecture with S3 for artifact traceability and a single interview_id tying document ingestion, AI generation, and post-interview reporting together.",
+      "Demonstrated hands-on AWS service breadth and AI-native workflow design under time pressure across a full serverless stack."
+    ],
+  },
+  {
+    id: 3,
     name: "Vulnerability Research: ChurchCRM (CVE, CVSS 6.4) and moonrepo/starbase (CVE, CVSS 8.8)",
     tools: ["PHP", "Rust", "Python", "Burp Suite", "Manual Code Review"],
     role: "Researcher",
@@ -28,7 +42,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "Zeus Banking Trojan - Malware Analysis and IOC Extraction",
     tools: ["Ghidra", "x64dbg", "Python", "pefile", "YARA", "REMnux", "Windows VM"],
     role: "Analyst",
@@ -42,7 +56,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "DeepAntiPhish - Phishing Detection Framework",
     tools: ["Python", "TensorFlow", "Keras", "Optuna", "NLP"],
     role: "Author",
@@ -52,7 +66,7 @@ export const projectsData = [
       "Built a deep learning phishing detection framework combining semantic and structural email features with Optuna hyperparameter tuning.",
       "Achieved 99.56% accuracy, 1.00 precision, and 0.997 F1-score on adversarial email corpora.",
       "Performed error analysis and interpretability reviews to harden the model against evasive patterns.",
-      "Designed for deployment as a production second detection layer alongside signature-based rules."
+      "Designed for deployment as a production second detection layer alongside signature-based rules - deployed at TCS for Shell as part of enterprise security operations."
     ],
   },
 ];
